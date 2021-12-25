@@ -13,7 +13,7 @@ struct ListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(0...10, id: \.self) { _ in
+                ForEach(viewModel.todos) { todo in
                     HStack {
                         Image(systemName: "circlebadge.fill")
                             .resizable()
@@ -21,9 +21,9 @@ struct ListView: View {
                             .frame(width: 15, height: 15)
                             .foregroundColor(.blue)
                         VStack {
-                            Text("タイトル")
+                            Text(todo.title)
                                 .font(.title3)
-                            Text("デスクリプション")
+                            Text(todo.desc)
                                 .font(.caption2)
                         }
                     }
