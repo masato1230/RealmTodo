@@ -10,6 +10,8 @@ import Foundation
 class ListViewModel: ObservableObject {
     @Published var isShowAddView = false
     @Published var todos: [Todo] = []
+    @Published var title = ""
+    @Published var desc = ""
     
     init () {
         fetchTodos()
@@ -17,6 +19,13 @@ class ListViewModel: ObservableObject {
     
     func fetchTodos() {
         self.todos = Todo.fetchAllTodo()!
+    }
+    
+    func addTodo() {
+        Todo.addTodo(title: title, desc: desc)
+        self.title = ""
+        self.desc = ""
+        fetchTodos()
     }
     
     static let shared = ListViewModel()
