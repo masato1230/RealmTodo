@@ -14,6 +14,9 @@
 		3271C2B627721DA90032F66E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3271C2B527721DA90032F66E /* Realm */; };
 		3271C2B827721DA90032F66E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3271C2B727721DA90032F66E /* RealmSwift */; };
 		3271C2BA27729F250032F66E /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271C2B927729F240032F66E /* ListView.swift */; };
+		3271C2BE277542CC0032F66E /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271C2BD277542CC0032F66E /* AddView.swift */; };
+		3271C2C02776D82A0032F66E /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271C2BF2776D82A0032F66E /* Todo.swift */; };
+		3271C2C2277712EE0032F66E /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3271C2C1277712EE0032F66E /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		3271C2A7277219780032F66E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3271C2AA277219780032F66E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3271C2B927729F240032F66E /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		3271C2BD277542CC0032F66E /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		3271C2BF2776D82A0032F66E /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		3271C2C1277712EE0032F66E /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				3271C2B927729F240032F66E /* ListView.swift */,
+				3271C2BD277542CC0032F66E /* AddView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,6 +94,7 @@
 		3271C2B2277219820032F66E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3271C2C1277712EE0032F66E /* ListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 		3271C2B3277219880032F66E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3271C2BF2776D82A0032F66E /* Todo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,9 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3271C2BE277542CC0032F66E /* AddView.swift in Sources */,
 				3271C2A62772196E0032F66E /* ContentView.swift in Sources */,
+				3271C2C2277712EE0032F66E /* ListViewModel.swift in Sources */,
 				3271C2A42772196E0032F66E /* RealmTodoApp.swift in Sources */,
 				3271C2BA27729F250032F66E /* ListView.swift in Sources */,
+				3271C2C02776D82A0032F66E /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +200,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -249,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
