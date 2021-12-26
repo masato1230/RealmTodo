@@ -38,5 +38,10 @@ class ListViewModel: ObservableObject {
         fetchTodos()
     }
     
+    func deleteTodo(todo: Todo) {
+        Todo.deleteTodo(todo: todo)
+        fetchTodos()
+    }
+    
     static let shared = ListViewModel()
 }

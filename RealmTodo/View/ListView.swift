@@ -29,7 +29,7 @@ struct ListView: View {
                     }
                     .swipeActions(edge: .trailing) {
                         Button {
-                            print("delete todo")
+                            viewModel.deleteTodo(todo: todo)
                         } label: {
                             Image(systemName: "trash")
                         }
