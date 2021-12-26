@@ -37,7 +37,10 @@ struct ListView: View {
                     }
                     .swipeActions(edge: .leading) {
                             Button {
-                                print("show edit view")
+                                viewModel.updatingTodo = todo
+                                viewModel.title = todo.title
+                                viewModel.desc = todo.desc
+                                viewModel.isShowAddView.toggle()
                             } label: {
                                 Image(systemName: "pencil.circle")
                             }

@@ -9,6 +9,7 @@ import Foundation
 
 class ListViewModel: ObservableObject {
     @Published var isShowAddView = false
+    @Published var updatingTodo: Todo? = nil
     @Published var todos: [Todo] = []
     @Published var title = ""
     @Published var desc = ""
@@ -25,6 +26,15 @@ class ListViewModel: ObservableObject {
         Todo.addTodo(title: title, desc: desc)
         self.title = ""
         self.desc = ""
+        fetchTodos()
+    }
+    
+    func updateTodo() {
+        Todo.updateTodo(todo: updatingTodo!, newTitle: self.title, newDesc: self.desc)
+        // 初期化
+        self.title = ""
+        self.desc = ""
+        updatingTodo = nil
         fetchTodos()
     }
     

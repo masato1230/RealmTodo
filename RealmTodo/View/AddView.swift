@@ -22,12 +22,19 @@ struct AddView: View {
                     TextField("", text: $viewModel.desc)
                 }
             }
-            .navigationTitle("ToDoを追加")
+            .navigationTitle(viewModel.updatingTodo == nil ? "ToDoを追加" : "ToDoを更新")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        viewModel.addTodo()
+                        // 追加
+                        if (viewModel.updatingTodo == nil) {
+                            viewModel.addTodo()
+                        } else {
+                        // 更新
+                            viewModel.updateTodo()
+                        }
+                        
                         viewModel.isShowAddView.toggle()
                     }) {
                         Text("完了")
